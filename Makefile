@@ -2,7 +2,7 @@
 #
 # Makefile for list implementation and test file.
 #
-# <Author>
+# <Tanjin Prity>
 
 list: main.c
 	gcc -o main main.c list.c
