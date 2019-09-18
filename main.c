@@ -78,3 +78,28 @@ int main() {
 	list_free(list1);
 	return 0;
 }
+
+
+/***
+ * Tests for linked list implementation.
+ * We assume index starts from 0.
+ * 
+ * Add 2 to the front: 2
+ * Add 1 to the front: 1 -> 2
+ * Add 3 to the back: 1 -> 2 -> 3
+ * Add 4 to the back: 1 -> 2 -> 3 -> 4
+ * Add 7 at index 3: 1 -> 2 -> 3 -> 7 -> 4
+ * Add 5 to the back: 1 -> 2 -> 3 -> 7 -> 4 -> 5
+ * Add 6 to the front: 6 -> 1 -> 2 -> 3 -> 7 -> 4 -> 5
+ * Add 9 at index 5: 6 -> 1 -> 2 -> 3 -> 7 -> 9 -> 4 -> 5
+ * 
+ * Removed 6 from the front: 1 -> 2 -> 3 -> 7 -> 9 -> 4 -> 5
+ * Removed 7 from the index, 3: 1 -> 2 -> 3 -> 9 -> 4 -> 5
+ * Removed 5 from the back: 1 -> 2 -> 3 -> 9 -> 4
+ * 
+ * Length of the list is: 5.
+ * 10 is not in the list.
+ * Element at index 2 is: 3.
+ * Element 2 is at index: 1.
+ * 
+*/
