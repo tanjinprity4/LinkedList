@@ -8,25 +8,56 @@
 #include "list.h"
 
 int main() {
-	printf("Tests for linked list implementation\n");
+	printf("Tests for linked list implementation.\n");
+    printf("We assume index starts from 0.\n\n");
 	list_t *list1 = list_alloc();
 	list_add_to_front(list1,2);
+    printf("Add %d to the front: ", 2);
+    list_print(list1);
+    
 	list_add_to_front(list1,1);
+    printf("Add %d to the front: ", 1);
+    list_print(list1);
+    
 	list_add_to_back(list1,3);
+    printf("Add %d to the back: ", 3);
+    list_print(list1);
+    
 	list_add_to_back(list1,4);
+    printf("Add %d to the back: ", 4);
+    list_print(list1);
+    
 	list_add_at_index(list1,7,3);
+    printf("Add %d at index %d: ", 7,3);
+    list_print(list1);
+    
 	list_add_to_back(list1,5);
+    printf("Add %d to the back: ", 5);
+    list_print(list1);
+    
 	list_add_to_front(list1,6);
+    printf("Add %d to the front: ", 6);
+    list_print(list1);
+    
 	list_add_at_index(list1,9,5);
-	list_print(list1);
+    printf("Add %d at index %d: ", 9,5);
+    list_print(list1);
+    
 	
 	elem e1 = list_remove_from_front(list1);
+    printf("\nRemoved %d from the front: ", e1);
+    list_print(list1);
+    
 	elem e2 = list_remove_at_index(list1, 3);
+    printf("Removed %d from the index, %d: ", e2, 3);
+    list_print(list1);
+    
 	elem e3 = list_remove_from_back(list1);
+    printf("Removed %d from the back: ", e3);
 	list_print(list1);
 	
 	int length = list_length(list1);
-	printf("Length of the list is: %d.\n", length);
+	printf("\nLength of the list is: %d.\n", length);
 	
 	elem item = 10;
 	bool exist = list_is_in(list1, item);
